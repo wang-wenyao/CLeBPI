@@ -11,9 +11,9 @@ This is code implementation of CLeBPI. We test our code on Ubuntu 18.04.
 
 ## Download
 You need to download dataset, pre-trained model, and fine-tuned model by the following three links:
-- [Dataset]()
-- [Pre-trained Model]()
-- [Fine-tuned Model]()
+- [Dataset](https://drive.google.com/file/d/132PZg5Z0s6tlDz8clPgR-eUXSKPEwj3i/view?usp=sharing)
+- [Pre-trained Model](https://drive.google.com/file/d/1bdREEAJCnuE-x7ThB1poE4wnIZpf4GkD/view?usp=sharing)
+- [Fine-tuned Model](https://drive.google.com/file/d/1QyP2wzPqMghlQHC5tdoHBf7OC85hwAA1/view?usp=share_link)
 
 ## Run
 If you want to use our model for training, you can directly use the following command:
