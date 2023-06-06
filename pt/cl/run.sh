@@ -1,0 +1,15 @@
+CUDA_LAUNCH_BLOCKING=1 python run_cl.py --encoder_name_or_path ./temp \
+                                         --cache_dir ./cache_dir \
+                                         --train_data_file ./data/train_aug.csv \
+                                         --eval_data_file ./data/valid_aug.csv \
+                                         --max_seq_length 512 \
+                                         --pad_to_max_length \
+                                         --output_dir ./output \
+                                         --checkpoint_path ./checkpoint \
+                                         --do_train \
+                                         --learning_rate 5e-5 \
+                                         --num_train_epochs 3 \
+                                         --warmup_step 10000 \
+                                         --save_step 15000 \
+                                         --per_device_train_batch_size 16 \
+                                         --per_device_eval_batch_size 16 \

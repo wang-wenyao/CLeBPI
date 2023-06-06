@@ -1,0 +1,19 @@
+CUDA_LAUNCH_BLOCKING=1 python pt.py --model_name roberta-base \
+                                         --cache_dir ./cache_dir \
+                                         --train_file ./data/train.txt \
+                                         --validation_file ./data/valid.txt \
+                                         --max_seq_length 512 \
+                                         --line_by_line \
+                                         --pad_to_max_length \
+                                         --output_dir ./checkpoint \
+                                         --do_train \
+                                         --do_eval \
+                                         --learning_rate 5e-5 \
+                                         --warmup_step 10000 \
+                                         --num_train_epochs 20 \
+                                         --save_step 15000 \
+                                         --preprocessing_num_workers 6 \
+                                         --per_device_train_batch_size 16 \
+                                         --per_device_eval_batch_size 16 \
+                                         --eval_steps 15000 \
+                                         --evaluation_strategy epoch
