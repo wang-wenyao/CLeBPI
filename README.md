@@ -11,16 +11,30 @@ This is code implementation of CLeBPI. We test our code on Ubuntu 18.04.
 
 ## Download
 You need to download dataset, pre-trained model, and fine-tuned model by the following three links:
-- [Dataset](https://drive.google.com/file/d/132PZg5Z0s6tlDz8clPgR-eUXSKPEwj3i/view?usp=sharing)
+- [Pt Dataset](https://drive.google.com/file/d/1fq60h8vpcNBwAfxZO5BL4rHe0XpyN277/view?usp=sharing)
+- [Ft Dataset](https://drive.google.com/file/d/132PZg5Z0s6tlDz8clPgR-eUXSKPEwj3i/view?usp=sharing)
 - [Pre-trained Model](https://drive.google.com/file/d/1bdREEAJCnuE-x7ThB1poE4wnIZpf4GkD/view?usp=sharing)
 - [Fine-tuned Model](https://drive.google.com/file/d/1QyP2wzPqMghlQHC5tdoHBf7OC85hwAA1/view?usp=share_link)
 
-## Run
-If you want to use our model for training, you can directly use the following command:
+## Pre-training
+pt folder contains code used for pre-training, including MLM and contrastive learning pre-training. Before runing, you need to config dataset path and model path.
+
+You first to run MLM by the following command:
+```shell
+bash pt/run_pt.sh
+```
+
+When finishing MLM, you can use the following command to perform contrastive learning pre-training:
+```shell
+bash pt/cl/run.sh
+```
+
+## Fine-tuning
+If you just want to use our model for fine-tuning, you can directly use the following command:
 ```shell
 bash run_clebpi.sh
 ```
-Note: Before running, you need to config two paths: 1) dataset path; 2) model path.
+Note: Before running, you need to config two paths: 1) dataset path; 2) model path. Besides, you also need to download the pre-trained model shared by the above link.
 
 Here are some useful parameters:
 - `do_train`: Whether fine-tune model
