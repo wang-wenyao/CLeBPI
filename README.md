@@ -28,6 +28,7 @@ When finishing MLM, you can use the following command to perform contrastive lea
 ```shell
 bash pt/cl/run.sh
 ```
+Note: If you want use your own data to perform contrastive learning pretraining, you can use our proposed jupyter notebook code to produce the corresponding data.
 
 ## Fine-tuning
 If you just want to use our model for fine-tuning, you can directly use the following command:
